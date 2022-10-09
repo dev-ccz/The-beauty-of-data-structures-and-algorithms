@@ -1,9 +1,5 @@
 package com.zcc._11_sort.impl;
 
-import com.zcc._11_sort.AbstractSort;
-
-import java.util.Arrays;
-
 /**
  * @author Zcc
  * created on 22/8/27 14:44

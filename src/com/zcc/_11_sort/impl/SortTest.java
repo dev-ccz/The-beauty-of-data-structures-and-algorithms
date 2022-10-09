@@ -1,7 +1,5 @@
 package com.zcc._11_sort.impl;
 
-import com.zcc._11_sort.Sort;
-
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,26 +12,27 @@ import java.util.Random;
 public class SortTest {
 
     public static void main(String[] args) throws InterruptedException {
+
+
         BubbleSort bubbleSort = new BubbleSort();
         sortTest(bubbleSort);
         sortTest(new InsertionSort());
         sortTest(new SelectionSort());
         sortTest(new MergeSort());
         sortTest(new QuickSort());
-        sortTest(new CountingSort());
+//        sortTest(new CountingSort());
+        System.out.println(1.0e-3);
     }
 
 
 
     private static void sortTest(Sort sort) {
 
-        Integer[] initArrays = initArrays(sort.getClass().getSimpleName(),100000 , 120);
+        Integer[] initArrays = initArrays(sort.getClass().getSimpleName(),10 , 751);
         long l = System.nanoTime();
         sort.sort(initArrays);
-//        System.out.println("【" + sort.getClass().getSimpleName() + "】" + " sorted arrays:" + Arrays.toString(initArrays));
+        System.out.println("【" + sort.getClass().getSimpleName() + "】" + " sorted arrays:" + Arrays.toString(initArrays));
         System.out.println("【" + sort.getClass().getSimpleName() + "】" + " sorted time:" + (System.nanoTime()-l));
-
-        System.out.println("");
 
     }
 
